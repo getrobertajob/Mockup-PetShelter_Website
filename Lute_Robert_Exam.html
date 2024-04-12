@@ -1,0 +1,114 @@
+<!-- Made by Robert Lute
+Coding Dojo HTML-CSS Exam
+11/5/2023 @9:06am MST -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Pet Shelter</title>
+  </head>
+  <body>
+    <!-- Header - includes Navigation Bar and Search filters-->
+    <div class="top">
+      <div class="topContainer">
+        <!-- Navgation Bar -->
+        <div class="navBar">
+          <!-- Logo and company name -->
+          <h1><img src="./assets/heart-light.png" alt="heart-light" />Pet Shelter</h1>
+
+          <!-- Nav Links with Donation button-->
+          <ul>
+            <li>Find a Pet</li>
+            <li>About</li>
+            <li><button onclick="donate(this)">Donate</button></li>
+          </ul>
+        </div>
+
+        <!-- Search Bar - used to set filters to refine results -->
+        <div class="searchBar">
+          <!-- Pet Type Selection -->
+          <div class="searchBarLeft">
+            <label>I'm looking for a...</label>
+            <div>
+              <img src="./assets/paw-light.png" alt="paw-light" />
+              <select name="petType" id="petType" onchange="alertType(this.value)">
+                <option value="Any Pet">Any Pet</option>
+                <option value="Cat">Cat</option>
+                <option value="Dog">Dog</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- City Input -->
+          <div class="searchBarMiddle">
+            <label>in or near...</label>
+            <span>
+              <img src="./assets/pin-light.png" alt="pin-light" />
+              <input type="text" placeholder="City or Zip Code" />
+            </span>
+          </div>
+
+          <!-- Search submission button -->
+          <p class="searchBarRight">
+            <button>Find your new best friend</button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results - displays data for each record -->
+    <div class="results">
+      <div class="resultsContainer">
+        <!-- each row contains single record -->
+        <!-- row #1 -->
+        <div class="row">
+          <img src="./assets/pepper.jpg" alt="pepper" />
+          <div class="rowMiddle">
+            <h2>Pepper</h2>
+            <p>
+              Pepper is a slightly shy grey tabby, but she really loves showing her human affection.
+            </p>
+          </div>
+          <div class="rowRight">
+            <form><input id="pepPetTotal" type="number" value="3"></input> petting(s)</form>
+            <button onclick="addPets('pepPetTotal')">Pet Pepper</button>
+          </div>
+        </div>
+
+        <!-- row #2 -->
+        <div class="row">
+          <img src="./assets/bruce.jpg" alt="bruce" />
+          <div class="rowMiddle">
+            <h2>Bruce</h2>
+            <p>Bruce is a loyal companion. He loves long walks and cold weather.</p>
+          </div>
+          <div class="rowRight">
+            <span><input id="bruPetTotal" type="number" value="5"></input> petting(s)</span>
+            <button onclick="addPets('bruPetTotal', bruPetTotal.innertext)">Pet Bruce</button>
+          </div>
+        </div>
+
+        <!-- row #3 -->
+        <div class="row">
+          <img src="./assets/oscar.jpg" alt="Oscar" />
+          <div class="rowMiddle">
+            <h2>Oscar</h2>
+            <p>Oscar is bright, energetic and friendly. He is looking for a good home.</p>
+          </div>
+          <div class="rowRight">
+            <span><input id="oscPetTotal" type="number" value="8"></input> petting(s)</span>
+            <button onclick="addPets('oscPetTotal')">Pet Oscar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="./script.js"></script>
+  </body>
+</html>

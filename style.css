@@ -1,0 +1,201 @@
+/* CSS Reset */
+/* -------------- */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+
+/* Header */
+/* --------- */
+/* used to center container */
+.top {
+  width: 100%;
+  height: 266px;
+  background-color: #119b9d;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  display: flex;
+  justify-content: center;
+}
+/* container holding Navigation and Search Bar */
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+/* Navigation Bar */
+/* ------------------- */
+.navBar {
+  font-size: 24px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  height: 50px;
+  align-items: center;
+}
+
+/* Logo and company name */
+.navBar h1 {
+  color: white;
+  font-size: 55px;
+}
+.navBar h1 img {
+  vertical-align: top;
+  margin-right: 15px;
+}
+
+/* Nav Links */
+.navBar ul {
+  font-size: 28px;
+  list-style-type: none;
+  display: flex;
+  margin-top: -20px;
+  gap: 35px;
+}
+
+/* Donation Button */
+.navBar button {
+  background-color: white;
+  border-style: solid;
+  border-color: #9800ff;
+  border-width: 3px;
+  border-radius: 50%;
+  height: 48px;
+  width: 135px;
+  color: #9800ff;
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: -10px;
+}
+
+
+/* Search Bar */
+/* -------------- */
+.searchBar {
+  width: 900px;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+/* Pet Type Selection */
+.searchBar .searchBarLeft {
+  display: flex;
+  flex-direction: column;
+}
+.searchBar select {
+  width: 160px;
+  height: 53px;
+  border-style: solid;
+  border-color: black;
+  border-width: 4px;
+  font-size: 22px;
+  padding: 0px 5px 4px;
+}
+.searchBar label {
+  color: white;
+  font-size: 22px;
+}
+
+/* City Input */
+.searchBar .searchBarMiddle {
+  display: flex;
+  flex-direction: column;
+}
+.searchBar img {
+  height: 48px;
+  width: 48px;
+  vertical-align: results;
+}
+.searchBar input {
+  width: 170px;
+  height: 39px;
+  border-style: solid;
+  border-color: black;
+  border-width: 4px;
+  font-size: 22px;
+  padding: 0px 5px 4px;
+}
+
+/* Search submission button */
+.searchBar button {
+  width: 320px;
+  height: 45px;
+  border-style: solid;
+  border-color: black;
+  border-width: 4px;
+  color: white;
+  font-size: 22px;
+  background-color: #9800ff;
+  padding: 0px 5px 4px;
+}
+
+/* Pet Records */
+/* ---------------- */
+.results {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+.results .resultsContainer {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+.row {
+  width: 900px;
+  height: 116px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ededed;
+  padding: 25px;
+  border-radius: 25px;
+}
+.row:hover {
+  background-color: #dcdcdc;
+}
+.row img {
+  width: 110px;
+  height: 110px;
+}
+.rowMiddle,
+.rowRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 22px;
+  margin-left: 28px;
+}
+.rowMiddle {
+  width: 430px;
+}
+.rowMiddle h2 {
+  font-size: 50px;
+}
+.rowRight {
+  text-align: end;
+  display: flex;
+}
+.row p {
+  flex-wrap: wrap;
+}
+.row button {
+  width: 235px;
+  height: 47px;
+  color: white;
+  font-size: 20px;
+  border-style: solid;
+  border-color: black;
+  border-width: 4px;
+  box-shadow: 3px 4px black;
+  background-color: #1dced0;
+}
